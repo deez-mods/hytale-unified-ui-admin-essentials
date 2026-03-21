@@ -1,0 +1,21 @@
+{
+  "Group": "DeezMods",
+  "Name": "UnifiedUI-Extension-Admin-Tooling",
+  "Version": "1.0.0",
+  "ServerVersion": "latest",
+  "Description": "An admin tooling extension for Unified UI",
+  "Authors": [
+    {
+      "Name": "Harley Torrisi",
+      "Website": "https://github.com/harley-codes"
+    }
+  ],
+  "Website": "http://deezmods.com",
+  "Dependencies": {
+    "DeezMods:UnifiedUI": "*"
+  },
+  "OptionalDependencies": {},
+  "Main": "com.deezmods.unifiedui.extension.admintooling.AdminToolingPlugin",
+  "LoadOrder": "POSTWORLD",
+  "IncludesAssetPack": true
+}

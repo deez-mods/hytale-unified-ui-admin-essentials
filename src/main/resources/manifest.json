@@ -15,7 +15,7 @@
     "DeezMods:UnifiedUI": "*"
   },
   "OptionalDependencies": {},
-  "Main": "com.deezmods.unifiedui.extension.admintooling.AdminToolingPlugin",
+  "Main": "com.deezmods.unifiedui.extension.admin.essentails.Plugin",
   "LoadOrder": "POSTWORLD",
   "IncludesAssetPack": true
 }

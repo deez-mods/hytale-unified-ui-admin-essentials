@@ -1,4 +1,4 @@
-package com.deezmods.unifiedui.extension.admintooling.services;
+package com.deezmods.unifiedui.extension.admin.essentials.services;
 
 import com.hypixel.hytale.logger.HytaleLogger;
 
@@ -10,14 +10,19 @@ public class LoggerService {
 
 	public void Log(Level logLevel, @Nullable String message) {
 		var finalMessage = "[UnifiedUI: Admin Tooling] %s".formatted(
-				message == null ? "No message provided" : message);
-		LOGGER.at(logLevel).log(finalMessage);
+			message == null ? "No message provided" : message);
+		LOGGER
+			.at(logLevel)
+			.log(finalMessage);
 	}
 
 	public void Log(@Nullable String message, @Nullable Exception exception) {
 		var finalMessage = "[UnifiedUI: Admin Tooling] %s".formatted(
 			message == null ? "No message provided" : message);
-		LOGGER.at(Level.SEVERE).withCause(exception).log(finalMessage);
+		LOGGER
+			.at(Level.SEVERE)
+			.withCause(exception)
+			.log(finalMessage);
 	}
 
 	public void LogInfo(@Nullable String message) {

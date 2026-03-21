@@ -1,7 +1,17 @@
-command.arg.dropdown.key.whitelist.enable = Enable Whitelist
-command.arg.dropdown.key.whitelist.disable = Disable Whitelist
-command.arg.dropdown.key.whitelist.add.self = Add Self to Whitelist
+command.actions.display.name = Admin Essentials
+command.actions.description = Run essential tasks
+command.actions.arg.display.name = Command
+command.actions.arg.dropdown.key.whitelist.enable = Enable Whitelist
+command.actions.arg.dropdown.key.whitelist.disable = Disable Whitelist
+command.actions.arg.dropdown.key.whitelist.add.self = Add Self to Whitelist
 
 message.whitelist.enabled = Whitelist has been enabled
 message.whitelist.disabled = Whitelist has been disabled
 message.whitelist.added.self = Added yourself to whitelist
+
+ui.feature.player.list.menu.name = Manage Players
+ui.feature.player.list.title = Manage Players
+
+ui.feature.player.list.action.ban = Ban
+ui.feature.player.list.action.ban.reason = |¯\_(0_0)_/¯| you shall not pass!
+ui.feature.player.list.action.unban = Unban

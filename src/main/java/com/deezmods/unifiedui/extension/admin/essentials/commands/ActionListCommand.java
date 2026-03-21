@@ -4,6 +4,7 @@ import com.deezmods.unifiedui.api.definitions.CommandArgumentDefinition;
 import com.deezmods.unifiedui.api.definitions.CommandDefinition;
 import com.deezmods.unifiedui.api.enums.CommandArgInputType;
 import com.deezmods.unifiedui.api.enums.CommandSortingGroup;
+import com.deezmods.unifiedui.extension.admin.essentials.enums.ExtensionId;
 import com.deezmods.unifiedui.extension.admin.essentials.enums.Permissions;
 import com.deezmods.unifiedui.extension.admin.essentials.enums.TranslationCode;
 import com.hypixel.hytale.server.core.command.system.CommandManager;
@@ -13,12 +14,12 @@ import java.util.List;
 import java.util.Map;
 import java.util.concurrent.CompletableFuture;
 
-public class PluginCommands {
-	public static CommandDefinition createActionListCommand(PlayerRef playerRef) {
+public class ActionListCommand {
+	public static CommandDefinition create(PlayerRef playerRef) {
 		var builder = new CommandDefinition.Builder(
-			"admin-tooling-commands",
-			"Admin Tooling",
-			"Run admin tooling command"
+			ExtensionId.COMMAND_ACTIONS.id,
+			TranslationCode.COMMAND_ACTIONS_DISPLAY_NAME.code,
+			TranslationCode.COMMAND_ACTIONS_DESCRIPTION.code
 		);
 
 		builder.withSortingGroup(CommandSortingGroup.ADMIN);
@@ -27,14 +28,14 @@ public class PluginCommands {
 		builder.withCommandArgs(List.of(
 			new CommandArgumentDefinition.Builder(
 				"action",
-				"Action"
+				TranslationCode.COMMAND_ACTIONS_ARG_DISPLAY_NAME.code
 			)
 				.withIsRequired(true)
 				.withCommandArgInputType(CommandArgInputType.Dropdown)
 				.withDefaultOptions(Map.of(
-					"whitelist-enable", TranslationCode.COMMAND_ARG_DROPDOWN_KEY_WHITELIST_ENABLE.code,
-					"whitelist-disable", TranslationCode.COMMAND_ARG_DROPDOWN_KEY_WHITELIST_DISABLE.code,
-					"whitelist-add-self", TranslationCode.COMMAND_ARG_DROPDOWN_KEY_WHITELIST_ADD_SELF.code
+					"whitelist-enable", TranslationCode.COMMAND_ACTIONS_ARG_DROPDOWN_KEY_WHITELIST_ENABLE.code,
+					"whitelist-disable", TranslationCode.COMMAND_ACTIONS_ARG_DROPDOWN_KEY_WHITELIST_DISABLE.code,
+					"whitelist-add-self", TranslationCode.COMMAND_ACTIONS_ARG_DROPDOWN_KEY_WHITELIST_ADD_SELF.code
 				))
 				.build()
 		));
@@ -60,7 +61,8 @@ public class PluginCommands {
 						.handleCommand(SystemCommandSender.INSTANCE, "whitelist add %s".formatted(playerRef.getUsername()));
 					playerRef.sendMessage(TranslationCode.MESSAGE_WHITELIST_ADDED_SELF.toTranslationMessage());
 				}
-				default -> {}
+				default -> {
+				}
 			}
 			return CompletableFuture.completedFuture(null);
 		});

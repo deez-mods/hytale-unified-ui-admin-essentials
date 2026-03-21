@@ -1,0 +1,27 @@
+$Common = "../Common.ui";
+$UuiContainer = "../UnifiedUI/Shared/Container.ui";
+$UuiVariables = "../UnifiedUI/Shared/Variables.ui";
+
+$Common.@Container #PlayerListFeatureRoot {
+    @ContentPadding = $UuiContainer.@ContainerContentPaddingFlush;
+    #Title {
+        //$Common.@HeaderSearch #Search {}
+        $Common.@Title {
+          @Text = %com.deezmods.unifiedui.extensions.admin.essentials.ui.feature.player.list.title;
+          @Alignment = Start;
+        }
+    }
+    #Content {
+        LayoutMode: TopScrolling;
+        ScrollbarStyle: $Common.@DefaultScrollbarStyle;
+        Group #PlayerListContainer {
+            LayoutMode: Top;
+            Padding: (
+                Left: $UuiVariables.@DefaultEmementSpacingMD,
+                Top: $UuiVariables.@DefaultEmementSpacingMD,
+                Right: $UuiVariables.@DefaultEmementSpacingMD
+                // Skip bottom padding to account for arg bottom padding
+            );
+        }
+    }
+}

@@ -1,0 +1,36 @@
+$Common = "../Common.ui";
+$UuiTypography = "../UnifiedUI/Shared/Typography.ui";
+$UuiVariables = "../UnifiedUI/Shared/Variables.ui";
+
+Group #PlayerListFeatureItemRoot {
+    Padding: (Bottom: $UuiVariables.@DefaultEmementSpacingMD);
+    Group {
+        LayoutMode: Top;
+        Padding: (Full: $UuiVariables.@DefaultEmementSpacingSM);
+        Background: (TexturePath: "../Common/Buttons/Secondary.png", VerticalBorder: 12, HorizontalBorder: 80);
+        Group {
+            LayoutMode: Left;
+            $UuiTypography.@LabelH4 #PlayerName {}
+            Group { FlexWeight: 1; }
+            $UuiTypography.@LabelH6 #PlayerUuid {}
+        }
+        Group {
+            Padding: (Vertical: $UuiVariables.@DefaultEmementSpacingSM);
+            Group {
+               Background: #000000(0.4);
+               Anchor: (Height: 3);
+            }
+        }
+        Group {
+            LayoutMode: Right;
+            ActionButton #ActionButtonBanPlayer {
+                Visible: false;
+                KeyBindingLabel: %com.deezmods.unifiedui.extensions.admin.essentials.ui.feature.player.list.action.ban;
+            }
+            ActionButton #ActionButtonUnbanPlayer {
+                Visible: false;
+                KeyBindingLabel: %com.deezmods.unifiedui.extensions.admin.essentials.ui.feature.player.list.action.unban;
+            }
+        }
+    }
+}

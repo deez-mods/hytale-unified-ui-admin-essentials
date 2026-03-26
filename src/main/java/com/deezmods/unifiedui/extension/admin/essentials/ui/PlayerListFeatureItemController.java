@@ -19,9 +19,14 @@ public class PlayerListFeatureItemController {
 	) {
 		builder.append(parentSelector, UI_FILE_PATH);
 		var selector = "%s[%s]".formatted(parentSelector, index);
-		builder.set("%s #PlayerName.Text".formatted(selector), player.playerName());
-		builder.set("%s #PlayerUuid.Text".formatted(selector), player.playerId().toString());
-		builder.set("%s #ActionButtonBanPlayer.Visible".formatted(selector), !player.isBanned());
-		builder.set("%s #ActionButtonUnbanPlayer.Visible".formatted(selector), player.isBanned());
+		builder.set("%s #PlayerName.Text".formatted(selector), player.playerName);
+		builder.set("%s #PlayerUuid.Text".formatted(selector), player.playerId.toString());
+		builder.set("%s #ActionButtonBanAdd.Visible".formatted(selector), !player.isBanned);
+		builder.set("%s #ActionButtonBanRemove.Visible".formatted(selector), player.isBanned);
+		builder.set("%s #ActionButtonTpHere.Visible".formatted(selector), player.isOnline);
+		builder.set("%s #ActionButtonTpThere.Visible".formatted(selector), player.isOnline);
+		builder.set("%s #ActionButtonWhitelistAdd.Visible".formatted(selector), !player.isWhitelisted);
+		builder.set("%s #ActionButtonWhitelistRemove.Visible".formatted(selector), player.isWhitelisted);
+		builder.set("%s #ActionButtonKick.Visible".formatted(selector), player.isOnline);
 	}
 }

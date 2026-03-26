@@ -23,13 +23,40 @@ Group #PlayerListFeatureItemRoot {
         }
         Group {
             LayoutMode: Right;
-            ActionButton #ActionButtonBanPlayer {
+            ActionButton #ActionButtonTpHere {
                 Visible: false;
-                KeyBindingLabel: %com.deezmods.unifiedui.extensions.admin.essentials.ui.feature.player.list.action.ban;
+                KeyBindingLabel: %com.deezmods.unifiedui.extensions.admin.essentials.ui.feature.player.list.action.tp.here;
+                Anchor: (Left: $UuiVariables.@DefaultEmementSpacingSM);
             }
-            ActionButton #ActionButtonUnbanPlayer {
+            ActionButton #ActionButtonTpThere {
                 Visible: false;
-                KeyBindingLabel: %com.deezmods.unifiedui.extensions.admin.essentials.ui.feature.player.list.action.unban;
+                KeyBindingLabel: %com.deezmods.unifiedui.extensions.admin.essentials.ui.feature.player.list.action.tp.there;
+                Anchor: (Left: $UuiVariables.@DefaultEmementSpacingSM);
+            }
+            ActionButton #ActionButtonBanAdd {
+                Visible: false;
+                KeyBindingLabel: %com.deezmods.unifiedui.extensions.admin.essentials.ui.feature.player.list.action.ban.add;
+                Anchor: (Left: $UuiVariables.@DefaultEmementSpacingSM);
+            }
+            ActionButton #ActionButtonBanRemove {
+                Visible: false;
+                KeyBindingLabel: %com.deezmods.unifiedui.extensions.admin.essentials.ui.feature.player.list.action.ban.remove;
+                Anchor: (Left: $UuiVariables.@DefaultEmementSpacingSM);
+            }
+            ActionButton #ActionButtonKick {
+                Visible: false;
+                KeyBindingLabel: %com.deezmods.unifiedui.extensions.admin.essentials.ui.feature.player.list.action.kick;
+                Anchor: (Left: $UuiVariables.@DefaultEmementSpacingSM);
+            }
+            ActionButton #ActionButtonWhitelistAdd {
+                Visible: false;
+                KeyBindingLabel: %com.deezmods.unifiedui.extensions.admin.essentials.ui.feature.player.list.action.whitelist.add;
+                Anchor: (Left: $UuiVariables.@DefaultEmementSpacingSM);
+            }
+            ActionButton #ActionButtonWhitelistRemove {
+                Visible: false;
+                KeyBindingLabel: %com.deezmods.unifiedui.extensions.admin.essentials.ui.feature.player.list.action.whitelist.remove;
+                Anchor: (Left: $UuiVariables.@DefaultEmementSpacingSM);
             }
         }
     }

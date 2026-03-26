@@ -5,8 +5,13 @@ import java.util.Arrays;
 import java.util.Objects;
 
 public enum PlayerListActions {
-	PLAYER_BAN("player.ban"),
-	PLAYER_UNBAN("player.unban");
+	BAN_ADD("ban.add"),
+	BAN_REMOVE("ban.remove"),
+	TP_HERE("tp.here"),
+	TP_THERE("tp.there"),
+	WHITELIST_ADD("whitelist.add"),
+	WHITELIST_REMOVE("whitelist.remove"),
+	KICK("kick");
 
 	public final String id;
 

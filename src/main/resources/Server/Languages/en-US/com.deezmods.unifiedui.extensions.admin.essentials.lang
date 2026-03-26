@@ -1,17 +1,36 @@
 command.actions.display.name = Admin Essentials
 command.actions.description = Run essential tasks
 command.actions.arg.display.name = Command
-command.actions.arg.dropdown.key.whitelist.enable = Enable Whitelist
-command.actions.arg.dropdown.key.whitelist.disable = Disable Whitelist
-command.actions.arg.dropdown.key.whitelist.add.self = Add Self to Whitelist
+command.actions.arg.dropdown.key.whitelist.enable = Whitelist - Enable
+command.actions.arg.dropdown.key.whitelist.disable = Whitelist - Disable
+command.actions.arg.dropdown.key.whitelist.add.self = Whitelist - Add Self
+command.actions.arg.dropdown.key.whitelist.status = Whitelist - Status
+
+command.whitelist.player.display.name = Whitelist Player
+command.whitelist.player.description = Add player to whitelist
+command.whitelist.player.arg.display.name = Player Name
+command.whitelist.player.whitelisted = Player whitelisted successfully
 
 message.whitelist.enabled = Whitelist has been enabled
 message.whitelist.disabled = Whitelist has been disabled
 message.whitelist.added.self = Added yourself to whitelist
+message.whitelist.status.enabled = Whitelist Active!
+message.whitelist.status.disabled = Whitelist Deactivate!
+message.whitelist.player.added.unknown = Unknown player added to whitelist
+message.whitelist.player.added.known = Player added to whitelist
+message.whitelist.player.invalid = Invalid player name
 
 ui.feature.player.list.menu.name = Manage Players
 ui.feature.player.list.title = Manage Players
 
-ui.feature.player.list.action.ban = Ban
+ui.feature.player.list.action.ban.add = Ban
 ui.feature.player.list.action.ban.reason = |¯\_(0_0)_/¯| you shall not pass!
-ui.feature.player.list.action.unban = Unban
+ui.feature.player.list.action.ban.remove = Unban
+ui.feature.player.list.action.tp.there = TP There
+ui.feature.player.list.action.tp.here = TP Here
+ui.feature.player.list.action.whitelist.add = Whitelist
+ui.feature.player.list.action.whitelist.remove = Blacklist
+ui.feature.player.list.action.kick = Disconnect
+
+exception.file.read.bans = Failed to read ban file
+exception.file.read.player = Failed to read player file

@@ -2,13 +2,31 @@ package com.deezmods.unifiedui.extension.admin.essentials.commands;
 
 import com.hypixel.hytale.server.core.Message;
 import com.hypixel.hytale.server.core.command.system.CommandSender;
+import com.hypixel.hytale.server.core.universe.PlayerRef;
 import org.checkerframework.checker.nullness.compatqual.NonNullDecl;
+import org.checkerframework.checker.nullness.compatqual.NullableDecl;
 
+import javax.annotation.Nullable;
 import java.util.UUID;
 
 public class SystemCommandSender implements CommandSender {
 
 	public static SystemCommandSender INSTANCE = new SystemCommandSender();
+
+	private final @Nullable PlayerRef playerCaller;
+
+	private SystemCommandSender() {
+		this.playerCaller = null;
+	}
+
+	private SystemCommandSender(@NullableDecl PlayerRef playerCaller) {
+		this.playerCaller = playerCaller;
+	}
+
+	public static SystemCommandSender create(PlayerRef playerCaller) {
+		return new SystemCommandSender(playerCaller);
+	}
+
 
 	@Override
 	public String getDisplayName() {
@@ -31,5 +49,12 @@ public class SystemCommandSender implements CommandSender {
 	}
 
 	@Override
-	public void sendMessage(@NonNullDecl Message message) {}
+	public void sendMessage(@NonNullDecl Message message) {
+		if (this.playerCaller != null && this.playerCaller.isValid()) {
+			this.playerCaller.sendMessage(Message.join(
+				Message.raw("[UnifiedUI: Admin Tooling]\n- "),
+				message
+			));
+		}
+	}
 }

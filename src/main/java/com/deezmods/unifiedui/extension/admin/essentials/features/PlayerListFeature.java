@@ -112,7 +112,7 @@ public class PlayerListFeature {
 					Plugin.logger.LogInfo("Banned - target:%s - by:%s".formatted(player.playerName, player.playerName));
 					var pRef = Universe.get().getPlayer(player.playerId);
 					if (pRef == null) break;
-					pRef.getPacketHandler().disconnect(TranslationCode.UI_FEATURE_PLAYER_LIST_ACTION_BAN_REASON.toTranslationString());
+					pRef.getPacketHandler().disconnect(TranslationCode.UI_FEATURE_PLAYER_LIST_ACTION_BAN_REASON.toTranslationMessage());
 					Plugin.logger.LogInfo("Kicked - target:%s - by:%s".formatted(player.playerName, playerRef.getUsername()));
 				}
 				case PlayerListActions.TP_HERE -> {
@@ -144,7 +144,7 @@ public class PlayerListFeature {
 					if (player == null) break;
 					var pRef = Universe.get().getPlayer(player.playerId);
 					if (pRef == null) break;
-					pRef.getPacketHandler().disconnect(TranslationCode.UI_FEATURE_PLAYER_LIST_ACTION_BAN_REASON.toTranslationString());
+					pRef.getPacketHandler().disconnect(TranslationCode.UI_FEATURE_PLAYER_LIST_ACTION_BAN_REASON.toTranslationMessage());
 					Plugin.logger.LogInfo("Kicked - target:%s - by:%s".formatted(player.playerName, playerRef.getUsername()));
 				}
 			}

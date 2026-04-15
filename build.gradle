@@ -4,11 +4,11 @@ plugins {
 }
 
 group = 'com.deezmods.unifiedui.extension.admin.essentials'
-version = '1.0.0'
+version = '1.1.0'
 
 repositories {
     mavenCentral()
-    // Official Hytale Maven repository
+    maven { url "https://www.cursemaven.com" }
     maven {
         name = 'hytale-release'
         url = 'https://maven.hytale.com/release'
@@ -25,7 +25,7 @@ dependencies {
     // JSR305 annotations (@Nonnull, @Nullable)
     compileOnly 'com.google.code.findbugs:jsr305:3.0.2'
     implementation 'com.google.code.gson:gson:2.10.1'
-    compileOnly files("/lib/UnifiedUI-API-1.0.0.jar")
+    compileOnly 'curse.maven:unifiedui-api-1494489:7823029'
 }
 
 java {

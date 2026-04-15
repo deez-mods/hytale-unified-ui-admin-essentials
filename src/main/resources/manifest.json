@@ -1,8 +1,8 @@
 {
   "Group": "DeezMods",
   "Name": "UnifiedUI-Extension-Admin-Tooling",
-  "Version": "1.0.0",
-  "ServerVersion": "latest",
+  "Version": "1.1.0",
+  "ServerVersion": "2026.03.26-89796e57b",
   "Description": "An admin tooling extension for Unified UI",
   "Authors": [
     {
@@ -12,6 +12,7 @@
   ],
   "Website": "http://deezmods.com",
   "Dependencies": {
+    "DeezMods:UnifiedUI.API": "*",
     "DeezMods:UnifiedUI": "*"
   },
   "OptionalDependencies": {},
